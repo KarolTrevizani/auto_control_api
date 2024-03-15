@@ -7,7 +7,12 @@ ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
-        # In production we will use MySQL
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql_db',
+        'PORT': '3306',
+        'PASSWORD': 'or/Hw0fPnYTtYGQ15YZ/rhNDBv6WiciT',
+        'USER': 'root',
+        'HOST': '127.0.0.1',
     }
 }
 
