@@ -20,23 +20,29 @@ This project is developed collaboratively by a team of four: on the backend, [Ka
 Before starting, it is recommended to use a virtual environment to isolate project dependencies. This can be done using:
 
 ```bash
+# Create the venv enviroment
 python3 -m venv venv
+
+# Activate the venv enviroment
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
 
-After activating the virtual environment, install the project dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
+After activating the virtual environment, install the project dependencies.
 
 ### Requirements File
 
 The `requirements.txt` file contains all the necessary packages to run this project. Ensure you have this file in your project root and have run the command above to install these dependencies.
 
+```bash
+# Go to the dir where the requirements.txt are
+pip install -r requirements.txt
+```
+
 ## Configuration
 
 ### Environment Variables
+
+_Go to the dir where the file .env.dist are (It stays on the project dir)_
 
 To configure your project environment, copy the `.env.dist` file to `.env` in the same directory. Update this `.env` file with your specific configurations. The `.env.dist` file serves as a template outlining all necessary environment variables.
 
