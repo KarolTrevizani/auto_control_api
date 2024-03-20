@@ -23,6 +23,9 @@ class UserViewSet(viewsets.ModelViewSet):
             return UserSerializer
 
     def create(self, request, *args, **kwargs):
+        if User.objects.filter(email=request.data.get('email')).exists():
+            return Response({"detail": "E-mail already registered."}, status=309)
+
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
