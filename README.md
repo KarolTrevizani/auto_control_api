@@ -2,11 +2,12 @@
 
 ## Overview
 
-The Auto Control API is the backend part of a project aimed at providing comprehensive control over automotive-related expenses, user management, and vehicle tracking. 
+The Auto Control API is the backend part of a project aimed at providing comprehensive control over automotive-related expenses, user management, and vehicle tracking.
 <br>
 This project is developed collaboratively by a team of four: on the backend, [Karoline Trevizani](https://github.com/KarolTrevizani) and [Rolf Matela](https://github.com/roollf), and on the frontend, [Emanuel Vidal](https://github.com/emanuelvidall) and [Fernando Custódio](https://github.com/Fcsla). The frontend can be found at [Frontend Repository URL](https://github.com/emanuelvidall/auto-control).
 
 ## Technical Stack
+
 - **Framework**: Django
 - **API**: Django Rest Framework (DRF)
 - **Database**: Configurable
@@ -14,6 +15,7 @@ This project is developed collaboratively by a team of four: on the backend, [Ka
 ## Environment Setup
 
 ### Prerequisites
+
 - Python 3.8 or newer
 - pip (Python package installer)
 
@@ -70,6 +72,20 @@ Ensure you have correctly set up your `.env` file and activated your virtual env
 
 ```bash
 python manage.py runserver --settings=auto_control.settings.development
+```
+
+## Running Migrate
+
+When running the server you might see a warning:
+
+```bash
+You have X unapplied migration(s)...
+```
+
+To take advantage of Django's admin, auth, authtoken, contentype and sessions along with any models previously setup in any of your apps, you need to run the migrate script:
+
+```bash
+python manage.py migrate --settings=auto_control.settings.development
 ```
 
 ## Project Structure
